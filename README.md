@@ -5,7 +5,7 @@ Library for manipulating and composing continuations in Elm.
 **Usage of `Continuation` would be probably discouraged by broader elm community.
 Use this package as learning material or accept that its usage will
 probably be considered being anti-pattern and the fact that I'm neither trying
-you to convince to use or am being responsible for other folks reactions when you do so.**
+you to convince to use it nor I am being responsible for other folks reactions when you do so.**
 
 This package contains minimal implementation for abstractions to work with continuations
 which are commonly described as Continuation as Functor (`map`), Applicative (`andMap`) and Monad (`andThen`).
