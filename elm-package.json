@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "A simple library for working with continuations in elm",
+    "summary": "A lightweight library for working with continuations in elm",
     "repository": "https://github.com/turboMaCk/elm-continue.git",
     "license": "BSD3",
     "source-directories": [
