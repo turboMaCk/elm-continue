@@ -1,6 +1,7 @@
 {
   "root": "../src",
   "tests": [
-    "Continue"
+      "Continue",
+      "./README.md"
   ]
 }
