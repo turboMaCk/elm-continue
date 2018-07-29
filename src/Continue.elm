@@ -68,7 +68,9 @@ run f (Cont c) =
     c f
 
 
-{-|
+{-| Run with identity function.
+
+**This is useful only in case of very simple scenarios.**
 
     return ()
       |> exec
