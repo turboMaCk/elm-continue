@@ -13,4 +13,4 @@ You might be interested in [G. Gonzalez's blog post](http://www.haskellforall.co
 
 *Please note that this implementation is fairly limited as we can't express Monad Transformers in elm.*
 
-See [examples](examples)
+See [examples](https://github.com/turboMaCk/elm-continue/tree/master/examples)
