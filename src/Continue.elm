@@ -1,4 +1,8 @@
-module Continue exposing (Continue(..), andMap, andThen, exec, map, return, run)
+module Continue exposing
+    ( Continue(..), return
+    , run, exec
+    , map, andMap, andThen
+    )
 
 {-| Abstraction for working with continuations.
 
