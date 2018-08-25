@@ -3,7 +3,7 @@
     "name": "turboMaCk/elm-continue",
     "summary": "A lightweight library for working with continuations in elm",
     "license": "BSD-3-Clause",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "exposed-modules": [
         "Continue"
     ],
