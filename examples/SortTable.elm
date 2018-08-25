@@ -1,15 +1,16 @@
 module SortTable exposing (main)
 
-import Continue exposing (Continue(Cont))
+import Continue exposing (Continue(..))
 import Html exposing (Html)
 import Html.Attributes as Attrs
 import Html.Events as Events
+import Browser
 
 
-main : Program Never Model Msg
+main : Program () Model Msg
 main =
-    Html.beginnerProgram
-        { model = model
+    Browser.sandbox
+        { init = initialModel
         , update = update
         , view = view
         }
@@ -55,8 +56,8 @@ type alias Model =
     }
 
 
-model : Model
-model =
+initialModel : Model
+initialModel =
     { fruits =
         [ { name = "Apple", count = 5 }
         , { name = "Orange", count = 4 }
@@ -97,10 +98,11 @@ viewRow entry =
 viewCount : Entry -> Html msg
 viewCount { count } =
     if count <= 3 then
-        Html.span [ Attrs.style [ ( "color", "red" ) ] ]
-            [ Html.text <| "last " ++ toString count ++ " items" ]
+        Html.span [ Attrs.style "color" "red" ]
+            [ Html.text <| "last " ++ String.fromInt count ++ " items" ]
+
     else
-        Html.text <| toString count
+        Html.text <| String.fromInt count
 
 
 viewTableHead : Html Msg
@@ -122,8 +124,9 @@ view model =
         showCount =
             if model.showCountWarning then
                 viewCount
+
             else
-                Html.text << toString << .count
+                Html.text << String.fromInt << .count
     in
     sortRows model.fruits model.sortTable
         |> Continue.map (List.map (Continue.run showCount << viewRow))
